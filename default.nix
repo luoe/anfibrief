@@ -4,7 +4,9 @@
 , srcUrl ? null
 }:
 
-with import nixpkgs-stable {};
+with import nixpkgs {
+  nixpkgs.url = "nixpkgs/nixos-24.11";
+};
 
 stdenv.mkDerivation rec {
   name = "anfibrief-${version}";
