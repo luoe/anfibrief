@@ -9,6 +9,7 @@ with import nixpkgs {
 };
 
 stdenv.mkDerivation rec {
+  nixpkgs.url = "nixpkgs/nixos-24.11";
   name = "anfibrief-${version}";
   version = if (date != null)
     then date
